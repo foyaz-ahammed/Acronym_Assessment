@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp"
+    app:contentPadding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/label_lf"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/textAppearanceLabel"
+            android:text="@string/label_lf"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/content_lf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textAppearance="@style/textAppearanceContent"
+            tools:text="enteral nutrition"
+            app:layout_constraintTop_toTopOf="@id/label_lf"
+            app:layout_constraintStart_toEndOf="@id/label_lf" />
+
+        <TextView
+            android:id="@+id/label_freq"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/textAppearanceLabel"
+            android:text="@string/label_freq"
+            app:layout_constraintTop_toBottomOf="@id/label_lf"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/content_freq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/textAppearanceContent"
+            tools:text="220"
+            app:layout_constraintTop_toTopOf="@id/label_freq"
+            app:layout_constraintStart_toEndOf="@id/label_freq" />
+
+        <TextView
+            android:id="@+id/label_since"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/textAppearanceLabel"
+            android:text="@string/label_since"
+            app:layout_constraintTop_toBottomOf="@id/label_freq"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/content_since"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/textAppearanceContent"
+            tools:text="1986"
+            app:layout_constraintTop_toTopOf="@id/label_since"
+            app:layout_constraintStart_toEndOf="@id/label_since" />
+
+        <TextView
+            android:id="@+id/show_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#AA0000ff"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:text="@string/show_vars"
+            app:layout_constraintTop_toBottomOf="@id/label_since"
+            app:layout_constraintStart_toStartOf="parent" />
+        
+        <com.exam.acronym.views.ExpandableLayout
+            android:id="@+id/detail_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            app:layout_constraintTop_toBottomOf="@id/show_details"
+            app:layout_constraintStart_toStartOf="@id/show_details">
+            <LinearLayout
+                android:id="@+id/var_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                tools:ignore="UselessLeaf" />
+        </com.exam.acronym.views.ExpandableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Acronym Test</string>
+    <string name="label_lf">Lf:</string>
+    <string name="label_freq">Freq:</string>
+    <string name="label_since">Since:</string>
+    <string name="show_vars">Show vars</string>
+    <string name="hide_vars">Hide vars</string>
+    <string name="retry">Retry</string>
+    <string name="error_msg">Error Loading Data. Please try again.</string>
+</resources>
